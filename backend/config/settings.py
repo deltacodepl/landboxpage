@@ -37,6 +37,7 @@ INSTALLED_APPS = [
   'contact',
   'hero',
   'footer',
+  'message',
 ]
 
 MIDDLEWARE = [

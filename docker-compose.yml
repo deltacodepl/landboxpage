@@ -28,27 +28,27 @@ services:
     depends_on:
       - db
 
-  queue:
-    build:
-      context: .
-      args:
-        REQUIREMENTS_FILE: requirements.txt
-    restart: unless-stopped
-    env_file: .env
-    command: sh /entrypoint-queue.sh
-    volumes:
-      - ./backend:/app
+  # queue:
+  #   build:
+  #     context: .
+  #     args:
+  #       REQUIREMENTS_FILE: requirements.txt
+  #   restart: unless-stopped
+  #   env_file: .env
+  #   command: sh /entrypoint-queue.sh
+  #   volumes:
+  #     - ./backend:/app
 
-  beat:
-    build:
-      context: .
-      args:
-        REQUIREMENTS_FILE: requirements.txt
-    restart: unless-stopped
-    env_file: .env
-    command: sh /entrypoint-beat.sh
-    volumes:
-      - ./:/app
+  # beat:
+  #   build:
+  #     context: .
+  #     args:
+  #       REQUIREMENTS_FILE: requirements.txt
+  #   restart: unless-stopped
+  #   env_file: .env
+  #   command: sh /entrypoint-beat.sh
+  #   volumes:
+  #     - ./:/app
 
   redis:
     image: redis:alpine

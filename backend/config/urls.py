@@ -12,6 +12,7 @@ urlpatterns = [
   path('contact/', include('contact.urls')),
   path('hero/', include('hero.urls')),
   path('footer/', include('footer.urls')),
+  path('message/', include('message.urls'))
 ]
 
 if settings.DEBUG:
