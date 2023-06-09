@@ -25,8 +25,9 @@ jobs:
       POSTGRES_HOST: localhost # default host value for the database
       POSTGRES_DB: djtesting
       POSTGRES_PORT: 5432
-      DJANGO_SECRET_KEY: '#p7nnxb7y^yq8ahfw5%$xh=f8=&1y*5+a5($8w_f7kw!-qig(j'
+      SECRET_KEY: '#p7nnxb7y^yq8ahfw5%$xh=f8=&1y*5+a5($8w_f7kw!-qig(j'
       DJANGO_SETTINGS_MODULE: 'config.settings'
+      DEBUG: True
     services:
       postgres_main:
         image: postgres:14
