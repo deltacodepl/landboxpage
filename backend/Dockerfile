@@ -15,9 +15,9 @@ RUN set -x && \
 	chmod +x /wait-for
 
 
-
 COPY ./docker/ ./
 RUN ls --recursive ./
+CMD ["sh", "./entrypoint-manage.sh"]
 CMD ["sh", "./entrypoint-web.sh"]
 
 COPY ./backend ./
