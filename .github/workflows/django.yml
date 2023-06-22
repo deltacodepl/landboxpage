@@ -68,6 +68,8 @@ jobs:
           DB_NAME: ${{ env.POSTGRES_DB }}
           DB_PORT: ${{ env.POSTGRES_PORT }}
         run: |
+          python backend/manage.py makemigrations
+          python backend/manage.py migrate
           python backend/manage.py test
 
   push-store-image:
