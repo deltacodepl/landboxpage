@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'contact',
     'hero',
     'footer',
+    'healthcheck',
 ]
 
 MIDDLEWARE = [
