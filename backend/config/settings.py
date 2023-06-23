@@ -8,7 +8,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = environ.get(['DJANGO_ALLOWED_HOSTS'], default=["*"])
+ALLOWED_HOSTS = environ.get('DJANGO_ALLOWED_HOSTS', default=["*"]).split(',')
 
 
 # Application definition
