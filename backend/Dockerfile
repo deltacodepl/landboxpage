@@ -17,8 +17,8 @@ RUN set -x && \
 
 COPY ./docker/ ./
 RUN ls --recursive ./
-CMD ["sh", "./entrypoint-manage.sh"]
-CMD ["sh", "./entrypoint-web.sh"]
+#CMD ["sh", "./entrypoint-manage.sh"]
+#CMD ["sh", "./entrypoint-web.sh"]
 
 COPY ./backend ./
 

@@ -64,6 +64,16 @@ django = ">=2.2"
 pytz = "*"
 
 [[package]]
+name = "environ"
+version = "1.0"
+description = "Stack Based Globals Management"
+optional = false
+python-versions = "*"
+files = [
+    {file = "environ-1.0.tar.gz", hash = "sha256:4df7f1dfeb7d1c988d2e19a8bd5d547a526e0400aeb35adf732032472f35dcb0"},
+]
+
+[[package]]
 name = "gunicorn"
 version = "20.1.0"
 description = "WSGI HTTP Server for UNIX"
@@ -285,4 +295,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.10"
-content-hash = "c0255122b2d83c328c45b55625e83edca1c3469a774afd1dae6dd82bb2ee3f4c"
+content-hash = "0d398647eebc20d2e06b617cd90db0ecce10cf6ba29ad64e7260764c83c9dd2f"

@@ -1,6 +1,6 @@
 import os
 from decouple import config
-
+from os import environ
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -8,10 +8,7 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = [
-  'localhost',
-  '127.0.0.1',
-]
+ALLOWED_HOSTS = environ.get('DJANGO_ALLOWED_HOSTS', default=["*"])
 
 
 # Application definition
