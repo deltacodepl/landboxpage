@@ -11,8 +11,10 @@ class HealthCheckMiddleware(object):
         # One-time configuration and initialization.
 
     def __call__(self, request):
+        logger.debug(request.path)
         if request.method == "GET":
             if request.path == "/readiness":
+
                 return self.readiness(request)
             elif request.path == "/healthz":
                 return self.healthz(request)
