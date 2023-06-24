@@ -12,20 +12,21 @@ class HealthCheckMiddleware(object):
 
     def __call__(self, request):
         if request.method == "GET":
-            if request.path == "/readiness":
-
+            if request.path == "/readiness" or request.path == "/readiness/":
                 return self.readiness(request)
-            elif request.path == "/healthz":
+            elif request.path == "/healthz" or request.path == "/healthz/":
                 return self.healthz(request)
         return self.get_response(request)
 
-    def healthz(self, request):
+    @staticmethod
+    def healthz(request):
         """
         Returns that the server is alive.
         """
         return HttpResponse("OK")
 
-    def readiness(self, request):
+    @staticmethod
+    def readiness(request):
         # Connect to each database and do a generic standard SQL query
         # that doesn't write any data and doesn't depend on any tables
         # being present.
