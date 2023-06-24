@@ -8,7 +8,7 @@ import ListItem from '@mui/material/ListItem';
 import ListItemAvatar from '@mui/material/ListItemAvatar';
 import ListItemText from '@mui/material/ListItemText';
 import Typography from '@mui/material/Typography';
-import TextIcon from '@mui/icons-material/TextSmsOutlined';
+import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import { useTheme } from '@mui/material/styles';
 
 axios.defaults.xsrfCookieName = 'csrftoken';
@@ -104,7 +104,7 @@ const Testimonials = () => {
                       backgroundColor={theme.palette.primary.main}
                       color={theme.palette.background.paper}
                     >
-                      <TextIcon 
+                      <TextsmsOutlinedIcon 
                         sx={{ 
                           color: theme.palette.common.white,
                           height: 25, 

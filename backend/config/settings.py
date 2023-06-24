@@ -8,11 +8,11 @@ SECRET_KEY = config('SECRET_KEY')
 
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = ["*"]
-# ALLOWED_HOSTS = environ.get('DJANGO_ALLOWED_HOSTS', default=["*"])
-# if type(ALLOWED_HOSTS) is str:
-#     ALLOWED_HOSTS = ALLOWED_HOSTS.split(',')
-# ALLOWED_HOSTS = ALLOWED_HOSTS + ['localhost']
+# ALLOWED_HOSTS = ["*"]
+ALLOWED_HOSTS = environ.get('DJANGO_ALLOWED_HOSTS', default=["*"])
+if type(ALLOWED_HOSTS) is str:
+    ALLOWED_HOSTS = ALLOWED_HOSTS.split(',')
+ALLOWED_HOSTS += ['localhost']
 
 # Application definition
 

@@ -18,7 +18,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import ListIcon from '@mui/icons-material/FormatListBulleted';
 import MenuIcon from '@mui/icons-material/Menu';
-import TextIcon from '@mui/icons-material/TextSmsOutlined';
+import TextsmsOutlinedIcon from '@mui/icons-material/TextsmsOutlined';
 import { alpha, useTheme } from '@mui/material/styles';
 
 import CustomButton from '../components/CustomButton';
@@ -94,7 +94,7 @@ const Header = ({ onSidebarOpen }) => {
             />
             <CustomButton
               href='#testimonials'
-              icon={<TextIcon />}
+              icon={<TextsmsOutlinedIcon />}
               text='Testimonials'
             />
             <CustomButton 
